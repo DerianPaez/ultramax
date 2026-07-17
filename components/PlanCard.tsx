@@ -30,6 +30,11 @@ export const PlanCard: React.FC<PlanCardProps> = ({
           : 'border border-border'
       }`}
     >
+      {plan.featured && (
+        <span className="absolute -top-5 left-1/2 -translate-x-1/2 inline-flex items-center rounded-full bg-primary px-6 py-3 text-[10px] sm:text-xs font-black text-white uppercase tracking-widest shadow-md shadow-primary/25">
+          Más Popular
+        </span>
+      )}
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-4">
           <h3 className="text-lg font-bold text-dark">{plan.title}</h3>
@@ -60,7 +65,11 @@ export const PlanCard: React.FC<PlanCardProps> = ({
           <div className="pt-6">
             <ul className="grid gap-4 border-t border-border pt-6 text-sm leading-6 text-slate-600">
               {plan.details.map((detail) => (
-                <PlanFeatureItem key={detail} label={detail} variant="success" />
+                <PlanFeatureItem
+                  key={detail}
+                  label={detail}
+                  variant="success"
+                />
               ))}
             </ul>
           </div>
