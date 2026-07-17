@@ -16,29 +16,30 @@ export type ContactInfo = {
 };
 
 export const navLinks: NavLink[] = [
-  { label: 'Inicio', href: '#inicio' },
-  { label: 'Planes Hogar', href: '#planes' },
-  { label: 'Cobertura', href: '#cobertura' },
-  { label: 'Ayuda', href: '#ayuda' }
+  { label: 'Inicio', href: '/' },
+  { label: 'Planes Hogar', href: '/#planes' },
+  { label: 'Planes Empresas', href: '/empresas' },
+  { label: 'Cobertura', href: '/#cobertura' },
+  { label: 'Ayuda', href: '/#ayuda' }
 ];
 
 export const footerSections: FooterSection[] = [
   {
     title: 'SERVICIOS',
     links: [
-      { label: 'Internet Hogar', href: '#planes' },
-      { label: 'Internet Pymes', href: '#planes' },
-      { label: 'Internet Dedicado', href: '#planes' },
-      { label: 'Streaming TV', href: '#planes' }
+      { label: 'Internet Hogar', href: '/#planes' },
+      { label: 'Internet Pymes', href: '/empresas' },
+      { label: 'Internet Dedicado', href: '/empresas' },
+      { label: 'Streaming TV', href: '/#planes' }
     ]
   },
   {
     title: 'SOPORTE',
     links: [
-      { label: 'Centro de Ayuda', href: '#ayuda' },
-      { label: 'Test de Velocidad', href: '#ayuda' },
-      { label: 'Reportar Falla', href: '#ayuda' },
-      { label: 'Facturación', href: '#ayuda' }
+      { label: 'Centro de Ayuda', href: '/#ayuda' },
+      { label: 'Test de Velocidad', href: '/#ayuda' },
+      { label: 'Reportar Falla', href: '/#ayuda' },
+      { label: 'Facturación', href: '/#ayuda' }
     ]
   }
 ];
