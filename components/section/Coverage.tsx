@@ -13,11 +13,10 @@ export const Coverage: React.FC = () => {
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <h2 className="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
-                Cobertura en Expansión
+                Ya estamos conectando Las Peñas
               </h2>
               <p className="text-lg text-muted">
-                Estamos presentes en los principales sectores de la ciudad y
-                seguimos creciendo cada semana.
+                Cada semana seguimos llegando a nuevos sectores para ofrecer un internet más rápido y un soporte que sí responde.
               </p>
             </div>
 
