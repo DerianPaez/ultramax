@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
+import React from 'react';
 import { contactInfo } from '../../data/navigation';
 
 export const Cta: React.FC = () => {
@@ -9,13 +9,14 @@ export const Cta: React.FC = () => {
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <div className="max-w-xl flex flex-col gap-4">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-              ¿Listo para volar en internet?
+              Cambia a un internet que sí responde.
             </h2>
             <p className="text-lg text-white/80">
-              Únete a los más de 50,000 ecuatorianos que ya disfrutan de la velocidad y estabilidad de FiberNet.
+              Únete a las familias y negocios de Las Peñas que quieren una
+              conexión estable y un soporte técnico de verdad.
             </p>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href={`https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Quiero%20contratar%20el%20servicio%20de%20internet%20de%20fibra%20óptica.`}
@@ -23,13 +24,13 @@ export const Cta: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center bg-white text-primary border-none hover:bg-neutral-100 font-semibold rounded-2xl shadow-xl shadow-black/10 px-8 py-4 cursor-pointer transition-all duration-200"
             >
-              Contratar Ahora
+              Hablar por WhatsApp
             </Link>
             <Link
-              href="#cobertura"
+              href="#planes"
               className="inline-flex items-center justify-center border border-white text-white hover:bg-white/10 font-semibold rounded-2xl px-8 py-4 transition-all duration-200 cursor-pointer"
             >
-              Ver Cobertura
+              Ver Planes
             </Link>
           </div>
         </div>
