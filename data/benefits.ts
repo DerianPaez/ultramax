@@ -1,6 +1,4 @@
-import React from 'react';
-import { FiRepeat, FiTool, FiHeadphones } from 'react-icons/fi';
-import { FaInfinity } from 'react-icons/fa6';
+import { FiHeadphones, FiWifi, FiZap, FiMapPin } from 'react-icons/fi';
 
 export type BenefitItem = {
   id: string;
@@ -11,27 +9,27 @@ export type BenefitItem = {
 
 export const benefitsData: BenefitItem[] = [
   {
-    id: 'symmetry',
-    title: 'Simetría Real',
-    description: 'Misma velocidad de subida y bajada para compartir archivos y jugar online sin lag.',
-    icon: FiRepeat
+    id: 'support',
+    title: 'Soporte Técnico Real',
+    description: 'No hablas con bots ni esperas días. Nuestro equipo está listo para ayudarte cuando lo necesites.',
+    icon: FiHeadphones
   },
   {
-    id: 'unlimited',
-    title: 'Datos Ilimitados',
-    description: 'Navega sin límites ni límites de consumo, sin reducción de velocidad.',
-    icon: FaInfinity
+    id: 'stable',
+    title: 'Internet Estable',
+    description: 'Fibra óptica diseñada para mantener una conexión rápida durante todo el día.',
+    icon: FiWifi
   },
   {
     id: 'installation',
-    title: 'Instalación Express',
-    description: 'Nuestro equipo técnico te conecta en menos de 24 horas hábiles.',
-    icon: FiTool
+    title: 'Instalación Rápida',
+    description: 'Instalamos tu servicio en el menor tiempo posible para que empieces a navegar cuanto antes.',
+    icon: FiZap
   },
   {
-    id: 'support',
-    title: 'Soporte Local',
-    description: 'Atención humana y rápida por WhatsApp, 24h para tus dudas.',
-    icon: FiHeadphones
+    id: 'proximity',
+    title: 'Atención Cercana',
+    description: 'Somos una empresa que conoce Las Peñas y responde cuando sus clientes la necesitan.',
+    icon: FiMapPin
   }
 ];
