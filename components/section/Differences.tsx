@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiX, FiCheck, FiArrowRight } from 'react-icons/fi';
+import React, { useEffect, useRef, useState } from 'react';
+import { FiArrowRight, FiCheck, FiX } from 'react-icons/fi';
 import { contactInfo } from '../../data/navigation';
 
 export const Differences: React.FC = () => {
@@ -34,7 +34,9 @@ export const Differences: React.FC = () => {
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-center">
           <div
             className={`lg:col-span-5 flex justify-center transition-all duration-1000 transform ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-8'
             }`}
           >
             <div className="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden border border-slate-100 shadow-xl bg-white p-3">
@@ -52,7 +54,9 @@ export const Differences: React.FC = () => {
 
           <div
             className={`lg:col-span-7 flex flex-col gap-10 transition-all duration-1000 delay-200 transform ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-8'
             }`}
           >
             <div className="flex flex-col gap-4">
@@ -60,7 +64,8 @@ export const Differences: React.FC = () => {
                 ¿Por qué somos diferentes?
               </h2>
               <p className="text-lg text-muted max-w-2xl">
-                En Las Peñas no solo necesitas un internet rápido. Necesitas una empresa que realmente responda cuando la necesites.
+                En Las Peñas no solo necesitas un internet rápido. Necesitas una
+                empresa que realmente responda cuando la necesites.
               </p>
             </div>
 
@@ -92,7 +97,10 @@ export const Differences: React.FC = () => {
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-500">
                       <FiX className="h-3.5 w-3.5" />
                     </span>
-                    <span>Interrupciones que afectan el trabajo, las clases y el entretenimiento.</span>
+                    <span>
+                      Interrupciones que afectan el trabajo, las clases y el
+                      entretenimiento.
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -136,17 +144,15 @@ export const Differences: React.FC = () => {
                     <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
                       <FiCheck className="h-3.5 w-3.5" />
                     </span>
-                    <span>Atención cercana antes y después de la instalación.</span>
+                    <span>
+                      Atención cercana antes y después de la instalación.
+                    </span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="flex flex-col gap-6 pt-4 border-t border-slate-100">
-              <p className="text-md font-semibold italic text-slate-600 leading-relaxed border-l-4 border-primary pl-4">
-                "Nuestro compromiso no termina cuando instalamos tu servicio. Empieza ahí."
-              </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:max-w-md">
                 <Link
                   href={`https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Quiero%20hablar%20con%20un%20asesor%20de%20UltraMax.`}
