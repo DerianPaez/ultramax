@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigation } from '../components/section/Navigation';
 import { Hero } from '../components/section/Hero';
+import { Differences } from '../components/section/Differences';
 import { Plans } from '../components/section/Plans';
 import { Benefits } from '../components/section/Benefits';
 import { Steps } from '../components/section/Steps';
@@ -16,6 +17,7 @@ export default function Home() {
       <Navigation />
       <main className="flex-1">
         <Hero />
+        <Differences />
         <Plans />
         <Benefits />
         <Steps />
