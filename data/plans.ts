@@ -16,7 +16,7 @@ export const plansData: PlanItem[] = [
     price: '$22',
     period: '/mes',
     description:
-      'Ideal para navegación básica, redes sociales y WhatsApp ligero.',
+      'Ideal para familias que usan redes sociales, Netflix y videollamadas todos los días.',
     features: [
       '150 Mbps Simétricos',
       'Instalación gratis (Promo)',
@@ -37,7 +37,8 @@ export const plansData: PlanItem[] = [
     title: 'Plan Streaming',
     price: '$30',
     period: '/mes',
-    description: 'Perfecto para familias, Netflix 4K y múltiples dispositivos.',
+    description:
+      'Disfruta películas y series en alta calidad sin interrupciones, incluso con varios dispositivos conectados.',
     features: [
       '200 Mbps Simétricos',
       'Optimizado para Streaming',
@@ -58,7 +59,7 @@ export const plansData: PlanItem[] = [
     price: '$45',
     period: '/mes',
     description:
-      'Diseñado para gamers y usuarios pro, ofrecen un Uptime y descarga máxima.',
+      'La mejor experiencia para juegos online, streaming y trabajo remoto con baja latencia.',
     features: [
       '300 Mbps Simétricos',
       'Latencia Optimizada',
