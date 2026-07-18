@@ -8,7 +8,7 @@ export const Steps: React.FC = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col gap-16">
         <div className="mx-auto max-w-3xl text-center flex flex-col gap-4 items-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Contrata en 3 Simples Pasos
+            Empieza a navegar en muy poco tiempo
           </h2>
           <p className="text-lg text-white/80">
             Sin filas, sin papeleos excesivos. Todo digital.

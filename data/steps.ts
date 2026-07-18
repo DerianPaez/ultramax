@@ -7,17 +7,17 @@ export type StepItem = {
 export const stepsData: StepItem[] = [
   {
     number: 1,
-    title: 'Elige tu Plan',
-    description: 'Revisa nuestras opciones y selecciona la que mejor se adapte a tu hogar.'
+    title: 'Elige tu plan',
+    description: 'Te ayudamos a encontrar el plan ideal según tu hogar o negocio.'
   },
   {
     number: 2,
-    title: 'Escríbenos',
-    description: 'Envíanos tu ubicación por WhatsApp para confirmar cobertura inmediata.'
+    title: 'Escríbenos por WhatsApp',
+    description: 'Confirmamos cobertura y agendamos tu instalación.'
   },
   {
     number: 3,
-    title: 'Instalamos',
-    description: 'Agendamos tu visita y en menos de 24 horas estarás navegando a máxima velocidad.'
+    title: 'Disfruta tu internet',
+    description: 'Nuestro técnico realiza la instalación y empiezas a navegar.'
   }
 ];
