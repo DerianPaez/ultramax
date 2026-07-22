@@ -1,8 +1,8 @@
 import React from 'react';
-import { benefitsEmpresasData } from '../../data/benefitsEmpresas';
+import { businessBenefitsData } from '../../data/businessBenefits';
 import { BenefitCard } from '../BenefitCard';
 
-export const BenefitsEmpresas: React.FC = () => {
+export const BusinessBenefits: React.FC = () => {
   return (
     <section className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col gap-16">
@@ -11,12 +11,14 @@ export const BenefitsEmpresas: React.FC = () => {
             Soluciones diseñadas para empresas exigentes
           </h2>
           <p className="text-lg text-muted">
-            Internet de fibra dedicada optimizado para videoconferencias, sistemas de seguridad, VPNs y transferencia masiva de datos.
+            Mantén tu empresa siempre conectada con una solución confiable para
+            videollamadas, sistemas empresariales, cámaras de seguridad y
+            trabajo en la nube.
           </p>
         </div>
 
         <div className="mx-auto grid max-w-sm grid-cols-1 gap-8 sm:max-w-none sm:grid-cols-2 lg:grid-cols-4 w-full">
-          {benefitsEmpresasData.map((benefit) => {
+          {businessBenefitsData.map((benefit) => {
             const IconComponent = benefit.icon;
             return (
               <BenefitCard
