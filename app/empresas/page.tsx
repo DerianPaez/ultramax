@@ -1,7 +1,7 @@
 import { Navigation } from '../../components/section/Navigation';
-import { HeroEmpresas } from '../../components/section/HeroEmpresas';
-import { BenefitsEmpresas } from '../../components/section/BenefitsEmpresas';
-import { PlansEmpresas } from '../../components/section/PlansEmpresas';
+import { BusinessHero } from '../../components/section/BusinessHero';
+import { BusinessPlans } from '../../components/section/BusinessPlans';
+import { BusinessBenefits } from '../../components/section/BusinessBenefits';
 import { Footer } from '../../components/section/Footer';
 
 export default function EmpresasPage() {
@@ -9,9 +9,9 @@ export default function EmpresasPage() {
     <div className="flex flex-col min-h-screen bg-white">
       <Navigation />
       <main className="flex-1">
-        <HeroEmpresas />
-        <PlansEmpresas />
-        <BenefitsEmpresas />
+        <BusinessHero />
+        <BusinessPlans />
+        <BusinessBenefits />
       </main>
       <Footer />
     </div>
