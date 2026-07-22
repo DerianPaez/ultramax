@@ -1,6 +1,6 @@
 export type NavLink = {
   label: string;
-  href: string;
+  href?: string;
 };
 
 export type FooterSection = {
@@ -20,38 +20,38 @@ export const navLinks: NavLink[] = [
   { label: 'Planes Hogar', href: '/#planes' },
   { label: 'Planes Empresas', href: '/empresas' },
   { label: 'Cobertura', href: '/#cobertura' },
-  { label: 'Ayuda', href: '/#ayuda' }
+  { label: 'Ayuda', href: '/#ayuda' },
 ];
 
 export const footerSections: FooterSection[] = [
   {
     title: 'SERVICIOS',
     links: [
-      { label: 'Internet Hogar', href: '/#planes' },
-      { label: 'Internet Pymes', href: '/empresas' },
-      { label: 'Internet Dedicado', href: '/empresas' },
-      { label: 'Streaming TV', href: '/#planes' }
-    ]
+      { label: 'Internet para Hogar', href: '/#planes' },
+      { label: 'Internet para Negocios', href: '/empresas' },
+      { label: 'Planes Gamer', href: '/#planes' },
+      { label: 'Cobertura', href: '/cobertura' },
+    ],
   },
   {
     title: 'SOPORTE',
     links: [
-      { label: 'Centro de Ayuda', href: '/#ayuda' },
-      { label: 'Test de Velocidad', href: '/#ayuda' },
-      { label: 'Reportar Falla', href: '/#ayuda' },
-      { label: 'Facturación', href: '/#ayuda' }
-    ]
-  }
+      { label: 'Soporte por WhatsApp', href: 'https://wa.me/593999113830' },
+      { label: 'Preguntas Frecuentes', href: '/#ayuda' },
+      { label: 'Información de Pago', href: '/#ayuda' },
+      { label: 'Lun - Sáb: 8:00 AM - 6:00 PM' },
+    ],
+  },
 ];
 
 export const contactInfo: ContactInfo = {
   phone: '(04) 500-6000',
   email: 'ventas@fibernet.ec',
   address: 'Guayaquil, Ecuador',
-  whatsapp: '593900000000'
+  whatsapp: '593900000000',
 };
 
-import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
+import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
 
 export type ContactField = {
   type: 'phone' | 'email' | 'address';
@@ -63,16 +63,16 @@ export const contactFields: ContactField[] = [
   {
     type: 'phone',
     value: contactInfo.phone,
-    icon: FiPhone
+    icon: FiPhone,
   },
   {
     type: 'email',
     value: contactInfo.email,
-    icon: FiMail
+    icon: FiMail,
   },
   {
     type: 'address',
     value: contactInfo.address,
-    icon: FiMapPin
-  }
+    icon: FiMapPin,
+  },
 ];

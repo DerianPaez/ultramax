@@ -3,13 +3,23 @@ import Link from 'next/link';
 
 export type FooterLinkItemProps = {
   label: string;
-  href: string;
+  href?: string;
 };
 
 export const FooterLinkItem: React.FC<FooterLinkItemProps> = ({
   label,
   href,
 }) => {
+  if (!href) {
+    return (
+      <li>
+        <span className="text-sm text-muted">
+          {label}
+        </span>
+      </li>
+    );
+  }
+
   return (
     <li>
       <Link

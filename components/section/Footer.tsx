@@ -1,9 +1,9 @@
-import React from 'react';
 import Link from 'next/link';
-import { footerSections, contactFields } from '../../data/navigation';
+import React from 'react';
 import { FiZap } from 'react-icons/fi';
-import { FooterLinkItem } from '../FooterLinkItem';
+import { contactFields, footerSections } from '../../data/navigation';
 import { FooterContactItem } from '../FooterContactItem';
+import { FooterLinkItem } from '../FooterLinkItem';
 
 export const Footer: React.FC = () => {
   return (
@@ -20,8 +20,8 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
             <p className="text-sm leading-6 text-muted max-w-xs">
-              Proveedor de internet de alta velocidad en Ecuador. Comprometidos
-              con la velocidad y estabilidad de tu conexión.
+              Conectamos hogares y negocios de Las Peñas con internet de fibra
+              óptica, atención cercana y soporte técnico local.
             </p>
           </div>
 
