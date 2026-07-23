@@ -1,11 +1,16 @@
 export type NavLink = {
   label: string;
+  href: string;
+};
+
+export type FooterNavLink = {
+  label: string;
   href?: string;
 };
 
 export type FooterSection = {
   title: string;
-  links: NavLink[];
+  links: FooterNavLink[];
 };
 
 export type ContactInfo = {
