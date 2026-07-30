@@ -5,15 +5,11 @@ export type CoverageZone = {
 
 export const coverageData: CoverageZone[] = [
   {
-    name: 'Estela Norte',
-    sectors: 'Sauces, Alborada, Orquídeas, Guayacanes.'
+    name: 'Las Peñas, Esmeraldas',
+    sectors: 'Cobertura de fibra óptica disponible en el sector principal y zonas comerciales.',
   },
   {
-    name: 'Vía a la Costa',
-    sectors: 'Puerto Azul, Blue Cost, Terranostra, Valle Alto.'
+    name: 'Cobertura en Expansión',
+    sectors: 'Próximamente conectando nuevos sectores y barrios aledaños.',
   },
-  {
-    name: 'Samanes y Alrededores',
-    sectors: 'La Florida, Metrópolis, Ciudad Celeste (Etapa 1-5).'
-  }
 ];

@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { coverageData } from '../../data/coverage';
-import { FiArrowRight } from 'react-icons/fi';
 import { CoverageZoneItem } from '../CoverageZoneItem';
 
 export const Coverage: React.FC = () => {
@@ -16,7 +14,7 @@ export const Coverage: React.FC = () => {
                 Ya estamos conectando Las Peñas
               </h2>
               <p className="text-lg text-muted">
-                Cada semana seguimos llegando a nuevos sectores para ofrecer un internet más rápido y un soporte que sí responde.
+                Ofrecemos internet de fibra óptica de alta velocidad y soporte técnico local que realmente responde.
               </p>
             </div>
 
@@ -29,31 +27,21 @@ export const Coverage: React.FC = () => {
                 />
               ))}
             </ul>
-
-            <div>
-              <Link
-                href="#mapa-completo"
-                className="inline-flex items-center text-sm font-semibold text-primary hover:text-primary-hover group gap-2"
-              >
-                Ver mapa de detalle
-                <FiArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
           </div>
 
           <div className="relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-lg aspect-4/3 rounded-3xl overflow-hidden border border-border shadow-xl bg-white p-4">
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-light">
                 <Image
-                  src="/images/coverage-map.png"
-                  alt="Mapa de cobertura de fibra óptica de UltraMax"
+                  src="/images/coverage-las-penas.png"
+                  alt="Mapa interactivo de cobertura de fibra óptica en Las Peñas"
                   fill
                   className="object-cover"
                   sizes="(max-w-1024px) 100vw, 50vw"
                 />
                 <div className="absolute bottom-4 left-4 rounded-xl bg-white/95 backdrop-blur-sm px-3.5 py-2 shadow-md border border-border/50">
                   <span className="text-xs font-bold text-dark">
-                    Mapa referencial
+                    Las Peñas, Esmeraldas
                   </span>
                 </div>
               </div>

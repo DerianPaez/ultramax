@@ -52,7 +52,7 @@ export const footerSections: FooterSection[] = [
 export const contactInfo: ContactInfo = {
   phone: '(04) 500-6000',
   email: 'ventas@ultramax.ec',
-  address: 'Guayaquil, Ecuador',
+  address: 'Las Peñas, Esmeraldas, Ecuador',
   whatsapp: '593900000000',
 };
 
