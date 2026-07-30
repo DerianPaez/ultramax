@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { FiZap } from 'react-icons/fi';
 import { contactFields, footerSections } from '../../data/navigation';
 import { FooterContactItem } from '../FooterContactItem';
 import { FooterLinkItem } from '../FooterLinkItem';
@@ -11,13 +11,14 @@ export const Footer: React.FC = () => {
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col gap-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-200">
-                <FiZap className="h-5.5 w-5.5 text-white" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-dark uppercase">
-                ultramax
-              </span>
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/images/logo.png"
+                alt="UltraMax Logo"
+                width={160}
+                height={36}
+                className="h-6 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+              />
             </Link>
             <p className="text-sm leading-6 text-muted max-w-xs">
               Conectamos hogares y negocios de Las Peñas con internet de fibra

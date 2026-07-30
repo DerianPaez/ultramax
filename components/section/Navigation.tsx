@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { navLinks, contactInfo } from '../../data/navigation';
-import { FiZap, FiMessageCircle, FiMenu, FiX } from 'react-icons/fi';
+import { FiMessageCircle, FiMenu, FiX } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { NavLink } from '../NavLink';
 
@@ -29,13 +30,15 @@ export const Navigation: React.FC = () => {
       }`}
     >
       <div className="mx-auto flex max-w-7xl h-20 items-center justify-between px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-200">
-            <FiZap className="h-5.5 w-5.5" />
-          </div>
-          <span className="text-xl font-bold tracking-tight text-dark uppercase">
-            ultramax
-          </span>
+        <Link href="/" className="flex items-center group">
+          <Image
+            src="/images/logo.png"
+            alt="UltraMax Logo"
+            width={160}
+            height={36}
+            className="h-6 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
