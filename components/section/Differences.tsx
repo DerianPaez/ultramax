@@ -1,44 +1,15 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { FiArrowRight, FiCheck, FiX } from 'react-icons/fi';
 import { contactInfo } from '../../data/navigation';
 
 export const Differences: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <section
-      ref={containerRef}
-      className="bg-white py-20 lg:py-28 overflow-hidden"
-    >
+    <section className="bg-white py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-center">
-          <div
-            className={`lg:col-span-5 flex justify-center transition-all duration-1000 transform ${
-              isVisible
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-8'
-            }`}
-          >
+          <div className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden border border-slate-100 shadow-xl bg-white p-3">
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-50">
                 <Image
@@ -52,13 +23,7 @@ export const Differences: React.FC = () => {
             </div>
           </div>
 
-          <div
-            className={`lg:col-span-7 flex flex-col gap-10 transition-all duration-1000 delay-200 transform ${
-              isVisible
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-8'
-            }`}
-          >
+          <div className="lg:col-span-7 flex flex-col gap-10">
             <div className="flex flex-col gap-4">
               <h2 className="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
                 ¿Por qué somos diferentes?
