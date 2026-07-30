@@ -46,7 +46,7 @@ export const Coverage: React.FC = () => {
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-light">
                 <Image
                   src="/images/coverage-map.png"
-                  alt="Mapa de cobertura de fibra óptica de FiberNet"
+                  alt="Mapa de cobertura de fibra óptica de UltraMax"
                   fill
                   className="object-cover"
                   sizes="(max-w-1024px) 100vw, 50vw"

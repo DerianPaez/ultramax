@@ -51,7 +51,7 @@ export const footerSections: FooterSection[] = [
 
 export const contactInfo: ContactInfo = {
   phone: '(04) 500-6000',
-  email: 'ventas@fibernet.ec',
+  email: 'ventas@ultramax.ec',
   address: 'Guayaquil, Ecuador',
   whatsapp: '593900000000',
 };

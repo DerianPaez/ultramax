@@ -33,8 +33,8 @@ export const Navigation: React.FC = () => {
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-200">
             <FiZap className="h-5.5 w-5.5" />
           </div>
-          <span className="text-xl font-bold tracking-tight text-dark">
-            FiberNet<span className="text-primary font-black">EC</span>
+          <span className="text-xl font-bold tracking-tight text-dark uppercase">
+            ultramax
           </span>
         </Link>
 
@@ -48,7 +48,7 @@ export const Navigation: React.FC = () => {
 
         <div className="hidden md:flex items-center gap-4">
           <Link
-            href={`https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Quiero%20hablar%20con%20un%20asesor%20de%20FiberNet.`}
+            href={`https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Quiero%20hablar%20con%20un%20asesor%20de%20UltraMax.`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm font-bold text-white bg-primary hover:bg-primary-hover rounded-xl px-5 py-2.5 shadow-md shadow-primary/15 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
@@ -60,7 +60,7 @@ export const Navigation: React.FC = () => {
 
         <div className="flex md:hidden items-center gap-3">
           <Link
-            href={`https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Quiero%20hablar%20con%20un%20asesor%20de%20FiberNet.`}
+            href={`https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Quiero%20hablar%20con%20un%20asesor%20de%20UltraMax.`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-10 w-10 items-center justify-center rounded-xl bg-success text-white shadow-md shadow-success/15 hover:scale-105 transition-transform duration-200 cursor-pointer"

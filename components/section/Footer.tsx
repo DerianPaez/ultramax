@@ -15,8 +15,8 @@ export const Footer: React.FC = () => {
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform duration-200">
                 <FiZap className="h-5.5 w-5.5 text-white" />
               </div>
-              <span className="text-xl font-bold tracking-tight text-dark">
-                FiberNet<span className="text-primary font-black">EC</span>
+              <span className="text-xl font-bold tracking-tight text-dark uppercase">
+                ultramax
               </span>
             </Link>
             <p className="text-sm leading-6 text-muted max-w-xs">
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
 
         <div className="border-t border-border pt-8 text-center">
           <p className="text-xs text-muted">
-            © {new Date().getFullYear()} FiberNet Ecuador S.A. Todos los
+            © {new Date().getFullYear()} UltraMax Ecuador S.A. Todos los
             derechos reservados.
           </p>
         </div>
