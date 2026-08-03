@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
                 alt="UltraMax Logo"
                 width={160}
                 height={36}
-                className="h-6 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+                className="h-4.5 sm:h-6 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
               />
             </Link>
             <p className="text-sm leading-6 text-muted max-w-xs">

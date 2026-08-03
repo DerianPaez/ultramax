@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { navLinks, contactInfo } from '../../data/navigation';
 import { FiMessageCircle, FiMenu, FiX } from 'react-icons/fi';
-import { FaWhatsapp } from 'react-icons/fa6';
 import { NavLink } from '../NavLink';
 
 export const Navigation: React.FC = () => {
@@ -36,7 +35,7 @@ export const Navigation: React.FC = () => {
             alt="UltraMax Logo"
             width={160}
             height={36}
-            className="h-6 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+            className="h-4.5 sm:h-6 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
             priority
           />
         </Link>
@@ -61,17 +60,7 @@ export const Navigation: React.FC = () => {
           </Link>
         </div>
 
-        <div className="flex md:hidden items-center gap-3">
-          <Link
-            href={`https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Quiero%20hablar%20con%20un%20asesor%20de%20UltraMax.`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-10 w-10 items-center justify-center rounded-xl bg-success text-white shadow-md shadow-success/15 hover:scale-105 transition-transform duration-200 cursor-pointer"
-            aria-label="Contactar por WhatsApp"
-          >
-            <FaWhatsapp className="h-5.5 w-5.5" />
-          </Link>
-          
+        <div className="flex md:hidden items-center">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-white text-dark shadow-sm hover:bg-light transition-colors duration-200 cursor-pointer focus:outline-none"
