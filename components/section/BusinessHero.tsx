@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { contactInfo } from '../../data/navigation';
+import { AnimateOnScroll } from '../AnimateOnScroll';
 
-export const BusinessHero: React.FC = () => {
+export const BusinessHero = () => {
   return (
     <section className="relative overflow-hidden py-24 lg:py-36 bg-neutral-950 text-white">
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none opacity-30">
@@ -18,7 +18,7 @@ export const BusinessHero: React.FC = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full">
-        <div className="flex flex-col items-center text-center gap-8">
+        <AnimateOnScroll variant="fade-up" className="flex flex-col items-center text-center gap-8">
           <div className="flex flex-col gap-6 items-center">
             <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl leading-[1.15]">
               Internet empresarial que
@@ -34,7 +34,7 @@ export const BusinessHero: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
+          <AnimateOnScroll variant="fade-up" delay={0.15} className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
             <Link
               href={`https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Quiero%20hablar%20con%20un%20asesor.`}
               target="_blank"
@@ -53,8 +53,8 @@ export const BusinessHero: React.FC = () => {
               <FaWhatsapp className="h-5.5 w-5.5 text-success" />
               Solicitar Cotización
             </Link>
-          </div>
-        </div>
+          </AnimateOnScroll>
+        </AnimateOnScroll>
       </div>
     </section>
   );

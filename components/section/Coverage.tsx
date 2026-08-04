@@ -1,14 +1,14 @@
-import React from 'react';
 import Image from 'next/image';
 import { coverageData } from '../../data/coverage';
+import { AnimateOnScroll } from '../AnimateOnScroll';
 import { CoverageZoneItem } from '../CoverageZoneItem';
 
-export const Coverage: React.FC = () => {
+export const Coverage = () => {
   return (
     <section id="cobertura" className="bg-light py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-          <div className="flex flex-col gap-8">
+          <AnimateOnScroll variant="fade-left" className="flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <h2 className="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
                 Ya estamos conectando Las Peñas
@@ -27,9 +27,9 @@ export const Coverage: React.FC = () => {
                 />
               ))}
             </ul>
-          </div>
+          </AnimateOnScroll>
 
-          <div className="relative flex justify-center lg:justify-end">
+          <AnimateOnScroll variant="fade-right" className="relative flex justify-center lg:justify-end">
             <div className="relative w-full max-w-lg aspect-4/3 rounded-3xl overflow-hidden border border-border shadow-xl bg-white p-4">
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-light">
                 <Image
@@ -46,7 +46,7 @@ export const Coverage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </AnimateOnScroll>
         </div>
       </div>
     </section>

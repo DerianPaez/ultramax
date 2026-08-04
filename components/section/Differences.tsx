@@ -1,15 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { FiArrowRight, FiCheck, FiX } from 'react-icons/fi';
 import { contactInfo } from '../../data/navigation';
+import { AnimateOnScroll } from '../AnimateOnScroll';
 
-export const Differences: React.FC = () => {
+export const Differences = () => {
   return (
     <section className="bg-white py-20 lg:py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:items-center">
-          <div className="lg:col-span-5 flex justify-center">
+          <AnimateOnScroll variant="fade-left" className="lg:col-span-5 flex justify-center">
             <div className="relative w-full max-w-md aspect-square rounded-3xl overflow-hidden border border-slate-100 shadow-xl bg-white p-3">
               <div className="relative w-full h-full rounded-2xl overflow-hidden bg-slate-50">
                 <Image
@@ -21,10 +21,10 @@ export const Differences: React.FC = () => {
                 />
               </div>
             </div>
-          </div>
+          </AnimateOnScroll>
 
           <div className="lg:col-span-7 flex flex-col gap-10">
-            <div className="flex flex-col gap-4">
+            <AnimateOnScroll variant="fade-right" className="flex flex-col gap-4">
               <h2 className="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
                 ¿Por qué somos diferentes?
               </h2>
@@ -32,92 +32,96 @@ export const Differences: React.FC = () => {
                 En Las Peñas no solo necesitas un internet rápido. Necesitas una
                 empresa que realmente responda cuando la necesites.
               </p>
-            </div>
+            </AnimateOnScroll>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-              <div className="flex flex-col gap-5 rounded-3xl bg-slate-50/50 p-6 sm:p-8 border border-slate-200/50 hover:shadow-md transition-all duration-300">
-                <h3 className="text-md font-bold text-slate-700 tracking-tight">
-                  Lo que muchos usuarios viven hoy
-                </h3>
-                <ul className="flex flex-col gap-3.5">
-                  <li className="flex items-start gap-2.5 text-sm text-slate-600">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-500">
-                      <FiX className="h-3.5 w-3.5" />
-                    </span>
-                    <span>El internet falla constantemente.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-sm text-slate-600">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-500">
-                      <FiX className="h-3.5 w-3.5" />
-                    </span>
-                    <span>Pasan días esperando un técnico.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-sm text-slate-600">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-500">
-                      <FiX className="h-3.5 w-3.5" />
-                    </span>
-                    <span>Nadie responde cuando hay un problema.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-sm text-slate-600">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-500">
-                      <FiX className="h-3.5 w-3.5" />
-                    </span>
-                    <span>
-                      Interrupciones que afectan el trabajo, las clases y el
-                      entretenimiento.
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              <AnimateOnScroll variant="fade-up" delay={0.1}>
+                <div className="flex flex-col gap-5 rounded-3xl bg-slate-50/50 p-6 sm:p-8 border border-slate-200/50 hover:shadow-md transition-all duration-300">
+                  <h3 className="text-md font-bold text-slate-700 tracking-tight">
+                    Lo que muchos usuarios viven hoy
+                  </h3>
+                  <ul className="flex flex-col gap-3.5">
+                    <li className="flex items-start gap-2.5 text-sm text-slate-600">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-500">
+                        <FiX className="h-3.5 w-3.5" />
+                      </span>
+                      <span>El internet falla constantemente.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm text-slate-600">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-500">
+                        <FiX className="h-3.5 w-3.5" />
+                      </span>
+                      <span>Pasan días esperando un técnico.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm text-slate-600">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-500">
+                        <FiX className="h-3.5 w-3.5" />
+                      </span>
+                      <span>Nadie responde cuando hay un problema.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm text-slate-600">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-rose-50 text-rose-500">
+                        <FiX className="h-3.5 w-3.5" />
+                      </span>
+                      <span>
+                        Interrupciones que afectan el trabajo, las clases y el
+                        entretenimiento.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </AnimateOnScroll>
 
-              <div className="flex flex-col gap-5 rounded-3xl bg-white p-6 sm:p-8 border-2 border-primary shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                <h3 className="text-md font-bold text-dark tracking-tight">
-                  Con UltraMax es diferente
-                </h3>
-                <ul className="flex flex-col gap-3.5">
-                  <li className="flex items-start gap-2.5 text-sm text-slate-700">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <FiCheck className="h-3.5 w-3.5" />
-                    </span>
-                    <span>Soporte técnico local.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-sm text-slate-700">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <FiCheck className="h-3.5 w-3.5" />
-                    </span>
-                    <span>Atención rápida por WhatsApp.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-sm text-slate-700">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <FiCheck className="h-3.5 w-3.5" />
-                    </span>
-                    <span>Instalaciones ágiles.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-sm text-slate-700">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <FiCheck className="h-3.5 w-3.5" />
-                    </span>
-                    <span>Técnicos que realmente llegan.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-sm text-slate-700">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <FiCheck className="h-3.5 w-3.5" />
-                    </span>
-                    <span>Internet estable para toda la familia.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5 text-sm text-slate-700">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                      <FiCheck className="h-3.5 w-3.5" />
-                    </span>
-                    <span>
-                      Atención cercana antes y después de la instalación.
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              <AnimateOnScroll variant="fade-up" delay={0.2}>
+                <div className="flex flex-col gap-5 rounded-3xl bg-white p-6 sm:p-8 border-2 border-primary shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                  <h3 className="text-md font-bold text-dark tracking-tight">
+                    Con UltraMax es diferente
+                  </h3>
+                  <ul className="flex flex-col gap-3.5">
+                    <li className="flex items-start gap-2.5 text-sm text-slate-700">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <FiCheck className="h-3.5 w-3.5" />
+                      </span>
+                      <span>Soporte técnico local.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm text-slate-700">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <FiCheck className="h-3.5 w-3.5" />
+                      </span>
+                      <span>Atención rápida por WhatsApp.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm text-slate-700">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <FiCheck className="h-3.5 w-3.5" />
+                      </span>
+                      <span>Instalaciones ágiles.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm text-slate-700">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <FiCheck className="h-3.5 w-3.5" />
+                      </span>
+                      <span>Técnicos que realmente llegan.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm text-slate-700">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <FiCheck className="h-3.5 w-3.5" />
+                      </span>
+                      <span>Internet estable para toda la familia.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5 text-sm text-slate-700">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                        <FiCheck className="h-3.5 w-3.5" />
+                      </span>
+                      <span>
+                        Atención cercana antes y después de la instalación.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </AnimateOnScroll>
             </div>
 
-            <div className="flex flex-col gap-6 pt-4 border-t border-slate-100">
+            <AnimateOnScroll variant="fade-up" delay={0.3} className="flex flex-col gap-6 pt-4 border-t border-slate-100">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:max-w-md">
                 <Link
                   href={`https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Quiero%20hablar%20con%20un%20asesor%20de%20UltraMax.`}
@@ -135,7 +139,7 @@ export const Differences: React.FC = () => {
                   <FiArrowRight className="h-5 w-5 text-slate-400 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </div>

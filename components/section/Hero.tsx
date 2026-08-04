@@ -1,10 +1,11 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
 import Link from 'next/link';
-import React, { useEffect, useRef } from 'react';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { FiArrowRight } from 'react-icons/fi';
 import { contactInfo } from '../../data/navigation';
+import { AnimateOnScroll } from '../AnimateOnScroll';
 import { FeatureCheck } from '../FeatureCheck';
 
 export const Hero: React.FC = () => {
@@ -36,7 +37,7 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8 w-full">
-        <div className="flex flex-col items-center text-center gap-10">
+        <AnimateOnScroll variant="fade-up" className="flex flex-col items-center text-center gap-10">
           <div className="flex flex-col gap-6 items-center">
             <h1 className="max-w-4xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl leading-[1.15] flex flex-col gap-2">
               <span>Internet que sí responde</span>
@@ -53,7 +54,7 @@ export const Hero: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
+          <AnimateOnScroll variant="fade-up" delay={0.15} className="flex flex-col sm:flex-row gap-4 justify-center w-full max-w-md">
             <Link
               href="#planes"
               className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary text-white hover:bg-primary-hover px-8 py-4 shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] font-bold text-base cursor-pointer"
@@ -71,14 +72,14 @@ export const Hero: React.FC = () => {
               <FaWhatsapp className="h-5.5 w-5.5 text-success" />
               Contratar por WhatsApp
             </Link>
-          </div>
+          </AnimateOnScroll>
 
-          <div className="flex flex-wrap justify-center items-center gap-y-3 gap-x-8 text-sm text-neutral-400 font-semibold">
+          <AnimateOnScroll variant="fade-up" delay={0.25} className="flex flex-wrap justify-center items-center gap-y-3 gap-x-8 text-sm text-neutral-400 font-semibold">
             <FeatureCheck label="Instalación GRATIS" />
             <FeatureCheck label="Soporte técnico local" />
             <FeatureCheck label="Sin Contratos Forzosos" />
-          </div>
-        </div>
+          </AnimateOnScroll>
+        </AnimateOnScroll>
       </div>
     </section>
   );

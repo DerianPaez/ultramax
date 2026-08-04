@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { faqData } from '../../data/faq';
+import { AnimateOnScroll } from '../AnimateOnScroll';
 import { FaqItem } from '../FaqItem';
 
 export const Faq: React.FC = () => {
@@ -10,23 +11,28 @@ export const Faq: React.FC = () => {
   return (
     <section id="ayuda" className="bg-white py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col gap-16">
-        <div className="mx-auto max-w-3xl text-center">
+        <AnimateOnScroll variant="fade-up" className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
             Preguntas Frecuentes
           </h2>
-        </div>
+        </AnimateOnScroll>
 
         <div className="mx-auto max-w-3xl w-full grid gap-4">
           {faqData.map((item, index) => (
-            <FaqItem
+            <AnimateOnScroll
               key={item.question}
-              question={item.question}
-              answer={item.answer}
-              isOpen={activeIndex === index}
-              onToggle={() =>
-                setActiveIndex(activeIndex === index ? null : index)
-              }
-            />
+              variant="fade-up"
+              delay={index * 0.08}
+            >
+              <FaqItem
+                question={item.question}
+                answer={item.answer}
+                isOpen={activeIndex === index}
+                onToggle={() =>
+                  setActiveIndex(activeIndex === index ? null : index)
+                }
+              />
+            </AnimateOnScroll>
           ))}
         </div>
       </div>

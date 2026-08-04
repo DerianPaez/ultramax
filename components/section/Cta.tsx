@@ -1,12 +1,15 @@
 import Link from 'next/link';
-import React from 'react';
 import { contactInfo } from '../../data/navigation';
+import { AnimateOnScroll } from '../AnimateOnScroll';
 
-export const Cta: React.FC = () => {
+export const Cta = () => {
   return (
-    <section className="bg-primary py-16 lg:py-24 text-white">
+    <section className="bg-primary py-16 lg:py-24 text-white overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <AnimateOnScroll
+          variant="fade-up"
+          className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between"
+        >
           <div className="max-w-xl flex flex-col gap-4">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
               Cambia a un internet que sí responde.
@@ -33,7 +36,7 @@ export const Cta: React.FC = () => {
               Ver Planes
             </Link>
           </div>
-        </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

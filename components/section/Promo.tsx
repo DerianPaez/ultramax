@@ -1,14 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { contactInfo } from '../../data/navigation';
+import { AnimateOnScroll } from '../AnimateOnScroll';
 
-export const Promo: React.FC = () => {
+export const Promo = () => {
   return (
     <section className="bg-white py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl bg-neutral-950 px-8 py-12 shadow-2xl sm:px-12 sm:py-16 md:px-16 lg:flex lg:items-center lg:justify-between lg:gap-x-12">
+        <AnimateOnScroll
+          variant="zoom-in"
+          className="relative overflow-hidden rounded-3xl bg-neutral-950 px-8 py-12 shadow-2xl sm:px-12 sm:py-16 md:px-16 lg:flex lg:items-center lg:justify-between lg:gap-x-12"
+        >
           <div className="absolute inset-0 z-0 select-none pointer-events-none opacity-30">
             <Image
               src="/images/promo-bg.png"
@@ -44,7 +47,7 @@ export const Promo: React.FC = () => {
               <FiArrowRight className="h-4.5 w-4.5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-        </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );
