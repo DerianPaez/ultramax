@@ -61,11 +61,25 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-border pt-8 text-center">
+        <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-xs text-muted">
             © {new Date().getFullYear()} UltraMax Ecuador S.A. Todos los
             derechos reservados.
           </p>
+          <div className="flex items-center gap-6 text-xs text-muted">
+            <Link
+              href="/terminos-y-condiciones"
+              className="hover:text-primary transition-colors duration-150"
+            >
+              Términos y Condiciones
+            </Link>
+            <Link
+              href="/politicas-de-privacidad"
+              className="hover:text-primary transition-colors duration-150"
+            >
+              Políticas de Privacidad
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
