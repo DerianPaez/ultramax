@@ -8,6 +8,8 @@ export type NavLink = {
 export type FooterNavLink = {
   label: string;
   href?: string;
+  target?: string;
+  rel?: string;
 };
 
 export type FooterSection = {
@@ -46,13 +48,18 @@ export const footerSections: FooterSection[] = [
       { label: 'Internet para Hogar', href: '/#planes' },
       { label: 'Internet para Negocios', href: '/empresas' },
       { label: 'Planes Gamer', href: '/#planes' },
-      { label: 'Cobertura', href: '/cobertura' },
+      { label: 'Cobertura', href: '#cobertura' },
     ],
   },
   {
     title: 'SOPORTE',
     links: [
-      { label: 'Soporte por WhatsApp', href: `https://wa.me/${contactInfo.whatsapp}` },
+      {
+        label: 'Soporte por WhatsApp',
+        href: `https://wa.me/${contactInfo.whatsapp}`,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      },
       { label: 'Preguntas Frecuentes', href: '/#ayuda' },
       { label: 'Información de Pago', href: '/#ayuda' },
       { label: 'Lun - Sáb: 8:00 AM - 6:00 PM' },

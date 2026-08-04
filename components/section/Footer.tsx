@@ -37,6 +37,8 @@ export const Footer: React.FC = () => {
                     key={link.label}
                     label={link.label}
                     href={link.href}
+                    target={link.target}
+                    rel={link.rel}
                   />
                 ))}
               </ul>

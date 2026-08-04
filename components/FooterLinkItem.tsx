@@ -4,11 +4,15 @@ import Link from 'next/link';
 export type FooterLinkItemProps = {
   label: string;
   href?: string;
+  target?: string;
+  rel?: string;
 };
 
 export const FooterLinkItem: React.FC<FooterLinkItemProps> = ({
   label,
   href,
+  target,
+  rel,
 }) => {
   if (!href) {
     return (
@@ -24,6 +28,8 @@ export const FooterLinkItem: React.FC<FooterLinkItemProps> = ({
     <li>
       <Link
         href={href}
+        target={target}
+        rel={rel}
         className="text-sm text-muted hover:text-primary transition-colors duration-150"
       >
         {label}
