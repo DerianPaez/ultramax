@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiCheck } from 'react-icons/fi';
 
 export type FeatureCheckProps = {
@@ -6,10 +5,10 @@ export type FeatureCheckProps = {
   className?: string;
 };
 
-export const FeatureCheck: React.FC<FeatureCheckProps> = ({
+export const FeatureCheck = ({
   label,
   className = '',
-}) => {
+}: FeatureCheckProps) => {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
       <FiCheck className="h-5 w-5 text-success" />

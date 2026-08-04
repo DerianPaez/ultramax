@@ -1,16 +1,14 @@
-import React from 'react';
-
 export type StepCardProps = {
   number: number;
   title: string;
   description: string;
 };
 
-export const StepCard: React.FC<StepCardProps> = ({
+export const StepCard = ({
   number,
   title,
   description,
-}) => {
+}: StepCardProps) => {
   return (
     <div className="flex flex-col gap-6 items-center text-center">
       <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white text-xl font-extrabold text-primary shadow-lg shadow-black/10 hover:scale-105 transition-transform duration-200">

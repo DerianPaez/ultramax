@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export type FooterLinkItemProps = {
@@ -8,12 +7,12 @@ export type FooterLinkItemProps = {
   rel?: string;
 };
 
-export const FooterLinkItem: React.FC<FooterLinkItemProps> = ({
+export const FooterLinkItem = ({
   label,
   href,
   target,
   rel,
-}) => {
+}: FooterLinkItemProps) => {
   if (!href) {
     return (
       <li>

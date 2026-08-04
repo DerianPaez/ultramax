@@ -1,17 +1,17 @@
-import React from 'react';
+import type { ButtonHTMLAttributes } from 'react';
 
-export type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
+export type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'primary' | 'success' | 'outline' | 'secondary';
   fullWidth?: boolean;
 };
 
-export const Button: React.FC<ButtonProps> = ({
+export const Button = ({
   children,
   variant = 'primary',
   fullWidth = false,
   className = '',
   ...props
-}) => {
+}: ButtonProps) => {
   const baseStyles =
     'inline-flex items-center justify-center px-6 py-3 rounded-xl font-medium transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2';
 

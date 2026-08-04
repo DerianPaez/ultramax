@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiChevronDown } from 'react-icons/fi';
 
 export type FaqItemProps = {
@@ -8,12 +7,12 @@ export type FaqItemProps = {
   onToggle: () => void;
 };
 
-export const FaqItem: React.FC<FaqItemProps> = ({
+export const FaqItem = ({
   question,
   answer,
   isOpen,
   onToggle,
-}) => {
+}: FaqItemProps) => {
   return (
     <div className="rounded-2xl border border-border bg-white p-6 transition-all duration-200 hover:border-primary/30">
       <button

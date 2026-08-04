@@ -1,16 +1,16 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 
 export type BenefitCardProps = {
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 };
 
-export const BenefitCard: React.FC<BenefitCardProps> = ({
+export const BenefitCard = ({
   title,
   description,
   icon,
-}) => {
+}: BenefitCardProps) => {
   return (
     <article className="flex flex-col gap-6 items-start rounded-3xl bg-light p-8 shadow-sm border border-border/50 hover:shadow-md transition-all duration-300">
       <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-border/50">

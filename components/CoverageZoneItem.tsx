@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiMapPin } from 'react-icons/fi';
 
 export type CoverageZoneItemProps = {
@@ -6,10 +5,10 @@ export type CoverageZoneItemProps = {
   sectors: string;
 };
 
-export const CoverageZoneItem: React.FC<CoverageZoneItemProps> = ({
+export const CoverageZoneItem = ({
   name,
   sectors,
-}) => {
+}: CoverageZoneItemProps) => {
   return (
     <li className="flex items-start gap-4">
       <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navigation } from '../components/section/Navigation';
 import { Hero } from '../components/section/Hero';
 import { Differences } from '../components/section/Differences';

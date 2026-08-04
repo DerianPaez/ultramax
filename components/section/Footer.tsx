@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { contactFields, footerSections } from '../../data/navigation';
 import { FooterContactItem } from '../FooterContactItem';
 import { FooterLinkItem } from '../FooterLinkItem';
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   return (
     <footer className="border-t border-border bg-white pt-16 pb-8">
       <div className="mx-auto max-w-7xl px-6 lg:px-8 flex flex-col gap-16">

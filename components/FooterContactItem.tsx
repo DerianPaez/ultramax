@@ -1,14 +1,14 @@
-import React from 'react';
+import type { ComponentType } from 'react';
 
 export type FooterContactItemProps = {
   value: string;
-  icon: React.ComponentType<{ className?: string }>;
+  icon: ComponentType<{ className?: string }>;
 };
 
-export const FooterContactItem: React.FC<FooterContactItemProps> = ({
+export const FooterContactItem = ({
   value,
   icon: Icon,
-}) => {
+}: FooterContactItemProps) => {
   return (
     <li className="flex items-center gap-3">
       <Icon className="h-5 w-5 text-primary" />

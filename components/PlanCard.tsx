@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 import { PlanItem } from '../data/plans';
 import { Button } from './Button';
@@ -15,11 +14,11 @@ export type PlanCardProps = {
   onToggle: () => void;
 };
 
-export const PlanCard: React.FC<PlanCardProps> = ({
+export const PlanCard = ({
   plan,
   expandedPlanTitle,
   onToggle,
-}) => {
+}: PlanCardProps) => {
   const isExpanded = expandedPlanTitle === plan.title;
 
   return (

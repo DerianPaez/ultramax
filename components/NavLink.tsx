@@ -1,21 +1,21 @@
-import React from 'react';
+import type { ReactNode } from 'react';
 import Link from 'next/link';
 
 export type NavLinkProps = {
   href: string;
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
   target?: string;
   rel?: string;
 };
 
-export const NavLink: React.FC<NavLinkProps> = ({
+export const NavLink = ({
   href,
   children,
   className = '',
   target,
   rel,
-}) => {
+}: NavLinkProps) => {
   return (
     <Link
       href={href}

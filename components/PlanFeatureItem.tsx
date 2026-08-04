@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiCheck } from 'react-icons/fi';
 
 export type PlanFeatureItemProps = {
@@ -6,10 +5,10 @@ export type PlanFeatureItemProps = {
   variant?: 'primary' | 'success';
 };
 
-export const PlanFeatureItem: React.FC<PlanFeatureItemProps> = ({
+export const PlanFeatureItem = ({
   label,
   variant = 'primary',
-}) => {
+}: PlanFeatureItemProps) => {
   const iconClass = variant === 'primary' ? 'bg-primary/10 text-primary' : 'bg-success/10 text-success';
   const textClass = variant === 'primary' ? 'font-medium text-dark' : 'text-slate-600';
 
