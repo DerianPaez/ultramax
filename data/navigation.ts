@@ -1,3 +1,5 @@
+import { FiHeadphones, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+
 export type NavLink = {
   label: string;
   href: string;
@@ -16,6 +18,7 @@ export type FooterSection = {
 export type ContactInfo = {
   phone: string;
   email: string;
+  supportEmail: string;
   address: string;
   whatsapp: string;
 };
@@ -27,6 +30,14 @@ export const navLinks: NavLink[] = [
   { label: 'Cobertura', href: '/#cobertura' },
   { label: 'Ayuda', href: '/#ayuda' },
 ];
+
+export const contactInfo: ContactInfo = {
+  phone: '+593 96 368 0853',
+  email: 'info@ultramaxec.net',
+  supportEmail: 'soporte@ultramaxec.net',
+  address: 'Las Peñas, Esmeraldas, Ecuador',
+  whatsapp: '593963680853',
+};
 
 export const footerSections: FooterSection[] = [
   {
@@ -41,7 +52,7 @@ export const footerSections: FooterSection[] = [
   {
     title: 'SOPORTE',
     links: [
-      { label: 'Soporte por WhatsApp', href: 'https://wa.me/593999113830' },
+      { label: 'Soporte por WhatsApp', href: `https://wa.me/${contactInfo.whatsapp}` },
       { label: 'Preguntas Frecuentes', href: '/#ayuda' },
       { label: 'Información de Pago', href: '/#ayuda' },
       { label: 'Lun - Sáb: 8:00 AM - 6:00 PM' },
@@ -49,17 +60,8 @@ export const footerSections: FooterSection[] = [
   },
 ];
 
-export const contactInfo: ContactInfo = {
-  phone: '(04) 500-6000',
-  email: 'ventas@ultramax.ec',
-  address: 'Las Peñas, Esmeraldas, Ecuador',
-  whatsapp: '593900000000',
-};
-
-import { FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
-
 export type ContactField = {
-  type: 'phone' | 'email' | 'address';
+  type: 'phone' | 'email' | 'supportEmail' | 'address';
   value: string;
   icon: React.ComponentType<{ className?: string }>;
 };
@@ -74,6 +76,11 @@ export const contactFields: ContactField[] = [
     type: 'email',
     value: contactInfo.email,
     icon: FiMail,
+  },
+  {
+    type: 'supportEmail',
+    value: contactInfo.supportEmail,
+    icon: FiHeadphones,
   },
   {
     type: 'address',
