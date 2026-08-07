@@ -56,12 +56,17 @@ export const footerSections: FooterSection[] = [
     links: [
       {
         label: 'Soporte por WhatsApp',
-        href: `https://wa.me/${contactInfo.whatsapp}`,
+        href: `https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Necesito%20soporte%20técnico%20con%20mi%20servicio%20de%20internet.`,
         target: '_blank',
         rel: 'noopener noreferrer',
       },
       { label: 'Preguntas Frecuentes', href: '/#ayuda' },
-      { label: 'Información de Pago', href: '/#ayuda' },
+      {
+        label: 'Información de Pago',
+        href: `https://wa.me/${contactInfo.whatsapp}?text=Hola!%20Deseo%20obtener%20información%20sobre%20las%20formas%20de%20pago%20y%20datos%20bancarios.`,
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      },
       { label: 'Lun - Sáb: 8:00 AM - 6:00 PM' },
     ],
   },
