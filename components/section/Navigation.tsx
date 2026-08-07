@@ -15,7 +15,7 @@ export const Navigation = () => {
       <div className="mx-auto flex max-w-7xl h-20 items-center justify-between px-6 lg:px-8">
         <Link href="/" className="flex items-center group shrink-0">
           <Image
-            src="/images/logo.svg"
+            src="/logo.svg"
             alt="UltraMax Logo"
             width={160}
             height={36}

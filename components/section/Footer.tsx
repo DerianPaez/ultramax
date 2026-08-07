@@ -12,7 +12,7 @@ export const Footer = () => {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center group">
               <Image
-                src="/images/logo.svg"
+                src="/logo.svg"
                 alt="UltraMax Logo"
                 width={160}
                 height={36}
