@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import { Navigation } from '../../components/section/Navigation';
 import { BusinessHero } from '../../components/section/BusinessHero';
 import { BusinessPlans } from '../../components/section/BusinessPlans';
 import { BusinessBenefits } from '../../components/section/BusinessBenefits';
-import { Footer } from '../../components/section/Footer';
 
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || 'https://ultramax-beta.vercel.app';
@@ -44,18 +42,14 @@ const breadcrumbJsonLd = {
 
 export default function EmpresasPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <Navigation />
-      <main className="flex-1">
-        <BusinessHero />
-        <BusinessPlans />
-        <BusinessBenefits />
-      </main>
-      <Footer />
-    </div>
+      <BusinessHero />
+      <BusinessPlans />
+      <BusinessBenefits />
+    </>
   );
 }
